@@ -1,12 +1,93 @@
+/* Подключаем шрифты Google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Raleway:700;800&display=swap");
 
-/*--------------------*/
-
-
+/* Назначаем основной шрифт сайта */
 body {
-  font-family: Rubik;
-  font-size: 12px;
-  color: #616161;
+    font-family: Rubik;
+    font-size: 12px;
+    color: #616161;
+}
+/* оболочка для прижатия footer */
+.wrapper{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* что бы оболочка занимала минимум всю ширину окна браузера */
+    min-height: 100%;
+}
+.main{
+    /* Для того что бы блок расширялся по всей высоте браузера */
+    flex: 1 1 auto;
+}
+/*К любой строке в которой есть "__container" */
+[class*='__container']{
+    max-width: 1057px;
+    margin: 0px auto;
+}
+/*                                           */
+.header {
+}
+.header__container {
+    display: flex;
+    min-height: 114px;/* Высота хедера по макету */
+    align-items: center;/* Выравнивает по центру по вертикали */
+}
+.header__logo {
+}
+.header__menu {
+    flex: 1 1 auto;/* Растягивается на всю свободную ширину блока */
+}
+.header__button {
+    flex: 0 0 252px;/* 252px размер всего блока с кнопкой по дизайну */
+    display: flex;
+    justify-content: flex-end;/* Прижал кнопку справа */
+}
+/*  */
+
+.menu {
+    display: flex;
+    justify-content: flex-end; /* Прижал меню справа */
+    
+}
+.menu__list {
+    display: flex;
+}
+.menu__item {
+    margin: 0px 40px 0px 0px;
+}
+.menu__link {
+    font-family: Raleway;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: 1.4px;
+    color: #000;
 }
 
+
+.button {
+    display: inline-block;
+    font-family: Raleway;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: 1.4px;
+    color: #FCFDFE;
+    padding: 14px 30px;
+    border-radius: 5px;
+    background-color: #EC5863;
+    transition: background-color 0.5s ease 0s;
+}
+.button:hover{
+    background-color: #ed838a;
+}
+.button_blue:hover {
+    background-color: #69a0f8;
+}
+.button_blue {
+    background-color: #4285F4;
+}
+/*                                                  */
